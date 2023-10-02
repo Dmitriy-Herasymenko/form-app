@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import { useForm, Controller, SubmitHandler, Control } from 'react-hook-form';
 import jsonData from '../data.json';
 import './style.css';
@@ -94,8 +94,7 @@ const Form: React.FC = () => {
         </button>
       </form>
     </div>
-    
   );
 };
 
-export default React.memo(Form);
+export default memo(Form);
