@@ -1,33 +1,32 @@
 [
-    {
+  {
       "default_value": "",
       "validation": "^\\d+$",
       "type": "text",
-      "label": "Текстове поле з валідацією на цифри"
-    },
-    {
-      "default_value": "Текст за замовчуванням",
+      "label": "Text field with validation for digits"
+  },
+  {
+      "default_value": "Default Text",
       "type": "text",
-      "label": "Текстове поле зі значенням за замовчуванням"
-    },
-    {
+      "label": "Text field with default value"
+  },
+  {
       "default_value": "",
       "validation": "^[A-Za-z]+$",
       "type": "text",
-      "label": "Текстове поле з валідацією на літери"
-    },
-    {
+      "label": "Text field with validation for letters"
+  },
+  {
       "default_value": 42,
       "type": "number",
       "min_value": 0,
       "max_value": 100,
-      "label": "Числове поле зі значенням за замовчуванням"
-    },
-    {
+      "label": "Numeric field with default value"
+  },
+  {
       "default_value": true,
       "type": "dropdown",
-      "options": ["Варіант 1", "Варіант 2", "Варіант 3"],
-      "label": "Поле випадаючого списку зі значенням за замовчуванням"
-    }
-  ]
-  
+      "options": ["Option 1", "Option 2", "Option 3" , 225],
+      "label": "Dropdown field with default value"
+  }
+]
