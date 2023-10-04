@@ -26,7 +26,7 @@ const InputField: React.FC<InputFieldProps> = memo(({ item, control }) => {
                             type="text"
                             {...field}
                             pattern={item.validation || undefined}
-                            className="form-input"
+                            className="form-input InputBx"
                             value={field.value as string}
                         />
                     )}
@@ -34,7 +34,7 @@ const InputField: React.FC<InputFieldProps> = memo(({ item, control }) => {
                         <textarea
                             {...field}
                             {...(item.validation && { pattern: new RegExp(item.validation) })}
-                            className="form-input"
+                            className="form-input InputBx"
                             value={field.value as string}
                         />
                     )}
@@ -58,7 +58,7 @@ const InputField: React.FC<InputFieldProps> = memo(({ item, control }) => {
                             {...field}
                             min={item.min_value || 0}
                             {...(item.max_value && { max: item.max_value })}
-                            className="form-input"
+                            className="form-input InputBx"
                             value={field.value as number}
                         />
                     )}
@@ -95,10 +95,10 @@ const Form: React.FC = () => {
     );
 
     return (
-        <div className="bg-gray-800 form-container">
+        <div className="bg-gray-800 form-container box">
             <form onSubmit={handleSubmit(onSubmit)} className="form">
                 {memoizedInputFields}
-                <button type="submit" className="form-button">
+                <button type="submit" className="form-button InputBx">
                     Submit
                 </button>
             </form>

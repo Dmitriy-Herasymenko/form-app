@@ -1,12 +1,87 @@
-/* styles.css */
-/* Додайте ваші стилі тут */
-.bg-gray-800 {
-    background-color: #2d3748;
-  }
-  
-  /* Стилі для форми */
+.box{
+  position: relative;
+  padding: 50px;
+  width: 360px;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  border-radius: 6px;
+  box-shadow: 0 5px 35px rgba(0,0,0,0.2);
+}
+
+.box::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 5px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 15%, transparent 50%, transparent 85%, rgba(255,255,255,0.3) 100%);
+}
+
+
+.box .form{
+    position: relative;
+    width: 100%;
+}
+
+.box .form h2{
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.box .form .InputBx{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.box .form .InputBx input{
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent;
+    padding: 8px 10px;
+    padding-left: 37px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    box-shadow: inset 0 0 25px rgba(0,0,0,0.2);
+}
+
+.box .form .InputBx input::placeholder{
+    color: #fff;
+
+}
+
+.box .form .InputBx input[type="submit"]{
+    background: #fff;
+    color: #111;
+    max-width: 100px;
+    padding: 8px 10px;
+    box-shadow: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.box .form .InputBx img{
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    transform: scale(0.7);
+}
+
+
   .form-container {
-    min-height: 100vh;
+    min-height: 88vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,10 +90,8 @@
   
   .form {
     max-width: 400px;
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 0.375rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+
     text-align: left;
   }
   
@@ -26,29 +99,45 @@
     color: #4a90e2;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    font-size: 14px;
   }
   
   .form-input {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent;
+    padding: 8px 10px;
+    padding-left: 13px;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 300;
+    box-shadow: inset 0 0 25px rgba(0,0,0,0.2);
   }
   
   .form-select {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-    margin-bottom: 1rem;
+    outline: none;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: transparent;
+    padding: 8px 10px;
+    padding-left: 13px;
+    border-radius: 6px;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    box-shadow: inset 0 0 25px rgba(0,0,0,0.2);
   }
   
   .form-button {
-    background-color: #4a90e2;
-    color: white;
+    background-color: #fff;
+    color: #111;
     border: none;
     border-radius: 0.25rem;
+    margin-top: 20px;
     padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
